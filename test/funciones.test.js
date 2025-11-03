@@ -10,4 +10,8 @@ describe('Función fibonacci(n)', () => {
     it('Debe devolver 0 si n = 0', () => {
         expect(fibonacci(0)).toBe(0)
       })
+    
+      it('Debe devolver 1 si n = 1', () => {
+        expect(fibonacci(1)).toBe(1)
+      })
 })
