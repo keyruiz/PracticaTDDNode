@@ -1,10 +1,10 @@
-name: test calculadora-basica-tdd
+name: test funciones TDD Node
 on:
   push:
     # Ejecutar la acción al hacer un push a la rama "main"
   pull_request:
     # Ejecutar la acción al hacer un push a la rama "main"
-    branches: [ main, development, feature-code ]
+    branches: [ main, development]
 jobs: 
   tests:
     runs-on: ubuntu-latest
