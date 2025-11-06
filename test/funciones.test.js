@@ -40,5 +40,10 @@ describe('Función esPinValido(pin)', () => {
     expect(esPinValido('1234567')).toBe(false)
   });
 
-  
+  it('Debe devolver false si contiene caracteres no numéricos', () => {
+    expect(esPinValido('12a4')).toBe(false)
+    expect(esPinValido('12 4')).toBe(false)
+    expect(esPinValido('abcd')).toBe(false)
+    expect(esPinValido('1234.')).toBe(false)
+  });
 });
