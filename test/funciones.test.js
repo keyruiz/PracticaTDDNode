@@ -46,4 +46,12 @@ describe('Función esPinValido(pin)', () => {
     expect(esPinValido('abcd')).toBe(false)
     expect(esPinValido('1234.')).toBe(false)
   });
+
+  it('Debe devolver false si todos los dígitos son iguales', () => {
+    expect(esPinValido('1111')).toBe(false)
+    expect(esPinValido('777777')).toBe(false)
+    expect(esPinValido('0000')).toBe(false)
+  });
+
+  
 });
