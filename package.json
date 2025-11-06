@@ -1,7 +1,7 @@
 {
   "name": "practicatddnode",
   "version": "1.0.0",
-  "description" : "Funciones práctica",
+  "description": "Funciones práctica",
   "main": "funciones.js",
   "type": "module",
   "scripts": {
@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "vitest": "^4.0.6"
+    "vitest": "^4.0.7"
   },
   "dependencies": {
     "chalk": "^5.6.2"
