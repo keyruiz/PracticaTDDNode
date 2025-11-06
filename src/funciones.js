@@ -18,36 +18,13 @@ function fibonacci(n) {
   }
 
 function esPinValido(pin) {
-  if (pin === null || pin === undefined) {
-    return false
-  }
+  if (pin == null || pin === '') return false
 
-  if (pin === '') {
-    return false
-  }
+  if (![4, 6].includes(pin.length)) return false
 
-  const longitud = pin.length
-  if (longitud !== 4 && longitud !== 6) {
-    return false
-  }
+  if (!/^\d+$/.test(pin)) return false
 
-  // Verificar que todos los caracteres sean dígitos
-  for (let i = 0; i < pin.length; i++) {
-    const c = pin[i]
-    if (c < '0' || c > '9') {
-      return false
-    }
-  }
-
-  // Comprobar si todos los dígitos son iguales
-  let todosIguales = true
-  for (let i = 1; i < pin.length; i++) {
-    if (pin[i] !== pin[0]) {
-      todosIguales = false
-      break
-    }
-  }
-  if (todosIguales) return false
+  if (/^(\d)\1+$/.test(pin)) return false
 
   return true
 }
