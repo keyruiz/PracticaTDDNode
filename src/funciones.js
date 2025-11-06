@@ -1,20 +1,20 @@
 function fibonacci(n) {
-    if(n < 0)
+  if (n < 0) {
       throw new RangeError("solo números enteros ≥ 0");
-    if(n == 0)
-      return 0;
-    if(n == 1)
-      return 1;
-    if(n == 2)
-      return 1;
-    if(n == 3)
-      return 2;
-    if(n == 4)
-      return 3;
-    if(n == 5)
-      return 5;
-    if(n == 6)
-      return 8;
+    }
+    
+    if (n === 0) return 0;
+    if (n === 1) return 1;
+  
+    let numAnterior2 = 0;
+    let numAnterior1 = 1;
+    let numero = numAnterior2 + numAnterior1;
+    for (let i = 2; i < n; i++) {
+        numAnterior2 = numAnterior1;
+        numAnterior1 = numero;
+        numero = numAnterior2 + numAnterior1;
+    }
+    return numero;
   }
 
 export {
