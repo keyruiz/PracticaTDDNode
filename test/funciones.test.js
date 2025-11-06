@@ -32,5 +32,13 @@ describe('Función esPinValido(pin)', () => {
   
   it('Debe devolver false si pin está vacío', () => {
     expect(esPinValido('')).toBe(false)
-  })
+  });
+
+  it('Debe devolver false si la longitud no es 4 ni 6', () => {
+    expect(esPinValido('123')).toBe(false)
+    expect(esPinValido('12345')).toBe(false)
+    expect(esPinValido('1234567')).toBe(false)
+  });
+
+  
 });
