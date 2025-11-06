@@ -29,4 +29,8 @@ describe('Función esPinValido(pin)', () => {
     expect(esPinValido(null)).toBe(false)
     expect(esPinValido(undefined)).toBe(false)
   });
+  
+  it('Debe devolver false si pin está vacío', () => {
+    expect(esPinValido('')).toBe(false)
+  })
 });
