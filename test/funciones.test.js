@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { fibonacci } from '../src/funciones.js'
+import { fibonacci, esPinValido } from '../src/funciones.js'
 
 describe('Función fibonacci(n)', () => {
     it('Debe lanzar RangeError si n ≤ 0', () => {
@@ -22,4 +22,11 @@ describe('Función fibonacci(n)', () => {
         expect(fibonacci(5)).toBe(5)
         expect(fibonacci(6)).toBe(8)
       })
-})
+});
+
+describe('Función esPinValido(pin)', () => {
+  it('Debe devolver false si pin es null o undefined', () => {
+    expect(esPinValido(null)).toBe(false)
+    expect(esPinValido(undefined)).toBe(false)
+  });
+});
