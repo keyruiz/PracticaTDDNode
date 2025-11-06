@@ -53,5 +53,9 @@ describe('Función esPinValido(pin)', () => {
     expect(esPinValido('0000')).toBe(false)
   });
 
-  
+  it('Debe devolver true si cumple todas las reglas', () => {
+    expect(esPinValido('1234')).toBe(true)
+    expect(esPinValido('987654')).toBe(true)
+    expect(esPinValido('1029')).toBe(true)
+  })
 });
